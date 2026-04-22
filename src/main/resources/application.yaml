@@ -1,0 +1,17 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: demo
+  r2dbc:
+    url: r2dbc:mariadb://localhost:3310/webflux-db
+    username: webflux
+    password: webflux@123
+
+  flyway:
+    enabled: true
+    url: jdbc:mariadb://localhost:3310/webflux-db
+    user: webflux
+    password: webflux@123
+    driver-class-name: org.mariadb.jdbc.Driver
