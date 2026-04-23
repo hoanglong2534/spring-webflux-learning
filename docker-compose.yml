@@ -14,5 +14,16 @@ services:
     volumes:
       - mariadb_data:/var/lib/mysql
 
+  redis:
+    image: redis:7-alpine
+    container_name: redis
+    restart: always
+    ports:
+      - "6379:6379"
+    command: redis-server --requirepass redis@123 --appendonly yes
+    volumes:
+      - redis_data:/data
+
 volumes:
   mariadb_data:
+  redis_data:

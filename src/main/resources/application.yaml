@@ -15,3 +15,9 @@ spring:
     user: webflux
     password: webflux@123
     driver-class-name: org.mariadb.jdbc.Driver
+
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password: redis@123
